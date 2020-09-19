@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        /*span{
+  background:blue;
+  height:2px;
+  width:18px;
+}*/
+
+        span{
+
+            background: blue;
+            display: inline-block;
+            height: 5px;
+            width: 18px;
+            position : relative;
+        }
+
+        span::before{
+            background: blue;
+            content:'';
+            display: block;
+            height: 5px;
+            width: 28px;
+            position:absolute;
+        }
+
+        span::after{
+            background: blue;
+            content:'';
+            display: block;
+            height: 5px;
+            width: 28px;
+            position:absolute;
+        }
+
+        span:before{top:-7px}
+
+        span:after{top:7px}
+    </style>
+</head>
+<body>
+
+<span></span>
+
+</body>
+</html>

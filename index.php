@@ -143,6 +143,15 @@ $markvoiture = getMarqVoiture($db);
 
         setInterval(time2,1000);
 
+        document.querySelector('body').addEventListener('mouseover',function(){
+
+            var arch=document.querySelector('#arch');
+            if (arch.style.display === 'block') {
+                arch.style.display = 'none';
+            }
+        })
+
+
         function filtrage(){
 
         document.querySelector('#filtrer').style.display='block';
@@ -212,7 +221,10 @@ $markvoiture = getMarqVoiture($db);
     border: 1px solid;
     margin-left: 15px;
     min-width: 151px;
-display: none">ui</div>
+display: none;
+position: absolute;
+    background: wheat;
+">ui</div>
                 <?php if($filtre==2):  ?>
                     <h3 onclick="filterform()" style="cursor: pointer">
                         Affiner votre

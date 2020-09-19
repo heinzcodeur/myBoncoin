@@ -49,7 +49,7 @@ h1,h2,h4{
 
 header{
 
-    height: 100px;
+    /*height: 100px;*/
     background-color: #f56b2a;
     position: fixed;
     top: 0;
