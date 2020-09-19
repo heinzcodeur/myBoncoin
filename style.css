@@ -1,0 +1,140 @@
+body{
+    font-family: algerian;
+    background-color: lightgoldenrodyellow;
+}
+h2{
+    margin-left: 15px;
+}
+
+
+
+h1,h2,h4{
+    color: rgb(60, 0, 128);
+}
+
+#huk{
+    background-color: lightblue;
+    border: 1px solid darkorange;
+    width: 145PX;
+    border-radius: 7px;
+    width: 50px;
+    font-size: 13px;
+    text-align: center;
+    margin-left: 1.8%;
+
+
+}
+
+.container{
+    width:50%;
+    margin:auto;
+    margin-top: 100px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+.container ul {
+    width:92.7%;
+    color: rgba(38, 63, 255, 0.99);
+    border:1px solid black;
+    margin: auto;
+}
+
+.container ul li{
+    color: rgba(38, 63, 255, 0.99);
+}
+
+header{
+
+    height: 100px;
+    background-color: lightcoral;;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    text-align: center;
+    opacity: 0.3;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+
+
+a:hover{
+    color: ghostwhite;
+}
+
+#lul{
+    display: none;
+    }
+
+ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 20px;
+    padding-left: inherit;
+    color: forestgreen;
+    font-size: x-large;
+    }
+
+li:nth-child(n+5){
+    display: none;
+}
+
+table{
+    border: 2px solid #000000;
+}
+
+th{
+    border: 2px solid #000000;
+}
+
+td:nth-child(2n+1){
+}
+
+td{
+
+    border: 2px solid #000000;
+}
+
+.welcome{
+
+    background-color: lightblue;
+    margin: auto;
+    margin-bottom: 10px;
+    padding:15px;
+}
+
+form{
+    padding:5px;
+}
+
+label{
+    display:inline-block;
+    width:101px;
+}
+input{
+    margin-bottom:10px;
+    margin-left: 15px;
+}
+
+#mdp{
+    margin-left: 5px;
+}
+
+button{
+    text-align: center;
+    margin-left: 18.8%;
+    width: 145px;
+    background-color: darkorange;
+    border-radius: 7px;
+    border: 1px solid darkorange;
+    color: white;
+    font-size: 13px;
+
+    }
+
+
+
