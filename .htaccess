@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule ^salut$ index.php
+
+RewriteRule ^ciao$ inscription.php
+
+RewriteRule ^annonces/([0-9]+)$ annoncesplus.php?id_annonce=$1
+
+RewriteRule ^(/.+)$ 404.html
+
+RewriteRule ^article/([a-z0-9]+)-([0-9]+)$ article.php?titre=$1&id=$2
+

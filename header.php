@@ -6,10 +6,11 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
+    <base href="/myboncoin/">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?=$_SERVER['php_self']?></title>
+    <title><?=substr($_SERVER['PHP_SELF'], mb_strripos($_SERVER['PHP_SELF'], "/")+1);?></title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="">
     <script src="js/ajax.js"></script>
@@ -43,6 +44,8 @@ session_start();
 
         .item {
             padding: 30px 26px;
+        }
+        .item.active {
             display: block;
         }
 
@@ -68,66 +71,9 @@ session_start();
             display: none;
         }
 
-        .active {
+        /*.active {
             display: block;
-        }
-        @media all and (min-width: 769px) {
-            * {
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0;
-            }
-
-            body {
-                font-family: sans-serif;
-            }
-
-            header {
-                background: orangered;
-                top: 0;
-                left: 0;
-                width: 100%;
-                position: fixed;
-                z-index: 9;
-            }
-
-            .menu {
-                display: flex;
-                list-style-type: none;
-                justify-content: center;
-            }
-
-            .item {
-                padding: 30px 26px;
-                display: block;
-            }
-
-
-            .logo {
-                flex: 1;
-                padding: 8px 8px;
-            }
-
-            .logo a {
-                font-size: 31px;
-            }
-
-
-            .menu li a {
-                text-decoration: none;
-                font-family: sans-serif;
-                display: block;
-                color: white;
-            }
-
-            .toggle {
-                display: none;
-            }
-            .active {
-            display: block;
-            }
-
-        }
+        }*/
 
         /* Mobile menu*/
         @media all and (max-width: 768px) {
@@ -252,21 +198,21 @@ session_start();
 
             $(function() {
                 $(".toggle").on("click", function() {
-                    //if($(window).width()<=768){
+                    /*if($(window).width()<=768){
                     if ($(".item").css('display') == 'none') {
                         $(".item").show();
                     } else {
                         $(".item").hide();
                     }
-                    //}
-                    /*if ($(".item").hasClass("active")) {
+                    }*/
+                    if ($(".item").hasClass("active")) {
                                  $(".item").removeClass("active");
                              } else {
                                  $(".item").addClass("active");
                              }
 
-                });*/
-                })
+                });
+
             });
 
             var timeNow = Math.floor((new Date().getTime())/1000);
@@ -326,16 +272,35 @@ session_start();
             form.show();
         }
 
-    </script>
+            /* Fonction executée lors de l'utilisation du clic droit.
+            $(document).on("contextmenu",function()
+            $(document).bind("contextmenu",function()
+            {
+// Si vous voulez ajouter un message d'alerte
+                alert('Merci de respecter le travail du webmaster en ne copiant pas le contenu sans autorisation');
+// On indique au navigateur de ne pas réagir en cas de clic droit.
+                return false;
+            });
+*/
+
+        </script>
     <!--script src="js/annonces.js"></script-->
 
 </head>
 
 <body>
+<?php
+echo '<pre>';
+//print_r(explode('',$_SERVER['PHP_SELF']));
+echo '</pre>';
 
+?>
 <header>
         <ul class="menu">
-            <li class="logo"><a href="index.php" style="font-family: 'Pacifico', cursive;">MyBoncoin.com</a> </>
+            <!--li class="logo"><a href="index.php" style="font-family: 'Pacifico', cursive;"><?=substr($_SERVER['PHP_SELF'], mb_strripos($_SERVER['PHP_SELF'], "/")+1);?></a> </-->
+        <li class="logo">
+            <a href="index.php" style="font-family: 'Pacifico', cursive;">Index.php</a>
+             </li>
 
             <li class="item"><a href="navbar.html">annonces</a></li>
             <?php

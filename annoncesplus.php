@@ -1,4 +1,7 @@
 <?php
+
+//var_dump($_GET);die();
+
 require_once 'header.php';
 require_once 'db_connect.php';
 require_once 'includes/models/annonces.php';

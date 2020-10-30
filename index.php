@@ -180,7 +180,7 @@ $markvoiture = getMarqVoiture($db);
 
 
     ?>
-    <div id="intro">
+    <div id="intro" style="display: none;">
         <span><?php if($annoncesfinales['nblignes']<=1){
                 echo $annoncesfinales['nblignes'].' annonce ';}
             else{
@@ -293,7 +293,8 @@ position: absolute;
         while($anonce = mysqli_fetch_assoc($annoncesfinales['req'])) : ?>
             <!--li style="list-style-type: none"-->
         <div style="border: 1px solid;background: chocolate">
-            <a href="annoncesplus.php?id_annonce=<?= $anonce['id_annonce'];?>">
+            <!--a href="annoncesplus.php?id_annonce=<?= $anonce['id_annonce'];?>"-->
+            <a href="annonces/<?= $anonce['id_annonce'];?>">
 
                     <p style="width: 180px"><?=
                         $anonce['titre']?></p>
